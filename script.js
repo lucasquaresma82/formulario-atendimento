@@ -66,7 +66,7 @@ async function enviar() {
   };
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbz8d2-0unKNW3-c8TmUb8f6xdLsI6cP_2zDkZV408TW/dev", {
+    await fetch("https://script.google.com/macros/s/AKfycbz8d2-0unKNW3-c8TmUb8f6xdLsI6cP_2zDkZV408TW/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
@@ -95,4 +95,5 @@ function limparFormulario() {
   document.querySelectorAll("input, textarea, select").forEach(c => {
     if (c.type !== "file") c.value = "";
   });
+
 }
