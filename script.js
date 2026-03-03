@@ -1,4 +1,4 @@
-const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbz8d2-0unKNW3-c8TmUb8f6xdLsI6cP_2zDkZV408TW//exec";
+const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbxWdBep_RqtyAKyldao7-J2EUw0mZXo8aVq7wQImPToYCVGUr5XdyX4kWA9gdGhzCyxcQ/exec";
 
 document.getElementById("cep").addEventListener("blur", buscarCEP);
 
@@ -95,3 +95,4 @@ function limparFormulario() {
     if (c.type !== "file") c.value = "";
   });
 }
+
