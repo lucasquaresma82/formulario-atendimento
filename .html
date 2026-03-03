@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atendimento Veterinário</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <h3>Endereço</h3>
+  <div class="input-wrapper">
+    <i class="fas fa-map-pin icon"></i>
+    <input id="cep" placeholder="Insira o CEP" maxlength="8">
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-road icon"></i>
+    <input id="logradouro" placeholder="Logradouro">
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-layer-group icon"></i>
+    <input id="bairro" placeholder="Bairro">
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-city icon"></i>
+    <input id="cidade" placeholder="Cidade">
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-flag icon"></i>
+    <input id="uf" placeholder="UF">
+  </div>
+
+  <h3>Atendimento</h3>
+
+  <div class="input-wrapper">
+    <i class="fas fa-paw icon"></i>
+    <input type="number" id="animais" placeholder="Número de animais atendidos">
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-comment-medical icon"></i>
+    <textarea id="motivo" placeholder="Motivo do atendimento"></textarea>
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-user-doctor icon"></i>
+    <select id="veterinaria">
+      <option value="">Selecione a veterinária</option>
+      <option>CINTIA AMARAL BORGES</option>
+      <option>NAYANA LORENE RIBEIRO AQUERE</option>
+      <option>FELIPE SARDINHA RIBEIRO</option>
+    </select>
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-user-tie icon"></i>
+    <select id="gerente">
+      <option value="">Selecione o gerente responsável</option>
+      <option>ROSIANE CRAVEIRO DO CARMO</option>
+      <option>NUBIA CRISTINA NASCIMENTO CORREA</option>
+      <option>LILIANE DA LUZ ALMEIDA</option>
+      <option>ELIZABETH GONCALVES NEVES</option>
+      <option>JOAO FELIPE REAL FEIO</option>
+    </select>
+  </div>
+
+  <div class="input-wrapper">
+    <i class="fas fa-camera icon"></i>
+    <input type="file" id="fotos" multiple accept="image/*">
+  </div>
+
+  <div id="progress"></div>
+  <button onclick="enviar()">Enviar</button>
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
