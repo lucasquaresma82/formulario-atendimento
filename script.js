@@ -1,6 +1,7 @@
+const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbz8d2-0unKNW3-c8TmUb8f6xdLsI6cP_2zDkZV408TW//exec";
+
 document.getElementById("cep").addEventListener("blur", buscarCEP);
 
-// Toast
 function toast(msg) {
   const t = document.getElementById("toast");
   t.innerText = msg;
@@ -8,7 +9,6 @@ function toast(msg) {
   setTimeout(() => t.classList.remove("show"), 3000);
 }
 
-// CEP com loading skeleton
 function buscarCEP() {
   const cep = document.getElementById("cep").value.replace(/\D/g, "");
   if (cep.length !== 8) return;
@@ -38,7 +38,6 @@ function buscarCEP() {
     });
 }
 
-// Envio
 async function enviar() {
   const progress = document.getElementById("progress");
   progress.style.width = "30%";
@@ -66,7 +65,7 @@ async function enviar() {
   };
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbz8d2-0unKNW3-c8TmUb8f6xdLsI6cP_2zDkZV408TW/exec", {
+    await fetch(URL_APPS_SCRIPT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
@@ -95,5 +94,4 @@ function limparFormulario() {
   document.querySelectorAll("input, textarea, select").forEach(c => {
     if (c.type !== "file") c.value = "";
   });
-
 }
